@@ -1,0 +1,410 @@
+\hypertarget{class_piko_1_1_window_base}{\section{Piko\-:\-:Window\-Base Class Reference}
+\label{d5/d35/class_piko_1_1_window_base}\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}}
+}
+
+
+{\ttfamily \#include $<$Window\-Base.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_piko_1_1_window_base_aeae412731ab7b4fc7aeaa6a39a05dbd4}{Window\-Base} (std\-::string title, int width=Get\-System\-Metrics(S\-M\-\_\-\-C\-X\-S\-C\-R\-E\-E\-N)/2, int height=Get\-System\-Metrics(S\-M\-\_\-\-C\-Y\-S\-C\-R\-E\-E\-N)/2)
+\item 
+virtual \hyperlink{class_piko_1_1_window_base_a8e0ff7e2f9de0593ff5f30690c8a1709}{$\sim$\-Window\-Base} ()
+\item 
+void \hyperlink{class_piko_1_1_window_base_adc2517998fdfcff88f16de67d7fc86e0}{show} () const 
+\item 
+void \hyperlink{class_piko_1_1_window_base_a191ed08be1048698dc097a9c15738645}{close} ()
+\item 
+bool \hyperlink{class_piko_1_1_window_base_ae0b863ad65962ea6262fdab2d74932fa}{is\-Closed} () const 
+\item 
+H\-W\-N\-D \hyperlink{class_piko_1_1_window_base_ade10d9b8547371c89280d3b4921fe85c}{get\-Handle} () const 
+\item 
+virtual void \hyperlink{class_piko_1_1_window_base_a7a38940a42a19e27dbf2c86d8457c188}{set\-Title} (std\-::string title) final
+\item 
+virtual void \hyperlink{class_piko_1_1_window_base_ab85a94e05075f628747eea90b8ab319a}{set\-Fullscreen} (bool flag) final
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_piko_1_1_window_base_a71b8febcd8354962939ae885f3a66a4d}{message\-Handler} (U\-I\-N\-T msg, W\-P\-A\-R\-A\-M w\-Param, L\-P\-A\-R\-A\-M l\-Param)
+\item 
+virtual bool \hyperlink{class_piko_1_1_window_base_abad8721eb7514d09cd86f12df5ebab1d}{on\-Key\-Down} (int keycode)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_piko_1_1_window_base_a76abd6ba4b10fcaa660374be5a2e5e72}{init\-Window\-Class} ()
+\item 
+void \hyperlink{class_piko_1_1_window_base_a1499a79647a1d375c3d471b29e1c9aeb}{create\-Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\-R\-E\-S\-U\-L\-T C\-A\-L\-L\-B\-A\-C\-K \hyperlink{class_piko_1_1_window_base_a7dd15d87a3b3da34271d4973faff0926}{static\-Wnd\-Proc} (H\-W\-N\-D hwnd, U\-I\-N\-T msg, W\-P\-A\-R\-A\-M w\-Param, L\-P\-A\-R\-A\-M l\-Param)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+H\-I\-N\-S\-T\-A\-N\-C\-E \hyperlink{class_piko_1_1_window_base_a84ca71a9b2cfe6ff0a7530a127fad31c}{m\-\_\-h\-Instance}
+\item 
+H\-W\-N\-D \hyperlink{class_piko_1_1_window_base_acc26556bb11c8c47a0499aad685bc69e}{m\-\_\-h\-Wnd}
+\item 
+W\-N\-D\-C\-L\-A\-S\-S\-E\-X\-A \hyperlink{class_piko_1_1_window_base_aa307fb2f2593554bff1338beda280d91}{m\-\_\-wc}
+\item 
+std\-::string \hyperlink{class_piko_1_1_window_base_a7ceb6bf3578cee3fea335d2fef70d4b2}{m\-\_\-title}
+\item 
+std\-::string \hyperlink{class_piko_1_1_window_base_ad6491bf8d178a85c5d57c9d2ef5ec706}{m\-\_\-class\-Name}
+\item 
+int \hyperlink{class_piko_1_1_window_base_aaa2d391163ae4db0a2bb7ff3cb241475}{m\-\_\-width}
+\item 
+int \hyperlink{class_piko_1_1_window_base_a66935c150f9a052b2f9fd5ec5e9116a2}{m\-\_\-height}
+\item 
+int \hyperlink{class_piko_1_1_window_base_a98906296f0425ce5dbb4e1a87d3e47b0}{m\-\_\-max\-Width}
+\item 
+int \hyperlink{class_piko_1_1_window_base_ad900258cbbba286731019361cc68c40a}{m\-\_\-max\-Height}
+\item 
+bool \hyperlink{class_piko_1_1_window_base_a0739592738b6a4e46206d3a2bf1cf892}{m\-\_\-is\-Closed}
+\item 
+bool \hyperlink{class_piko_1_1_window_base_aa0fcf89b789f911a37d526cd3d45a05b}{m\-\_\-is\-Fullscreen}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\-::string \hyperlink{class_piko_1_1_window_base_a0267852818d60b372f51f48b00e3e986}{C\-L\-A\-S\-S\-\_\-\-N\-A\-M\-E\-\_\-\-B\-A\-S\-E} = \char`\"{}Window\-Base\char`\"{}
+\item 
+static std\-::map$<$ H\-W\-N\-D, \\*
+\hyperlink{class_piko_1_1_window_base}{Window\-Base} $\ast$ $>$ \hyperlink{class_piko_1_1_window_base_a1adb16f8e85e4e461b57199e81b0c675}{m\-Window\-Registry} = std\-::map$<$H\-W\-N\-D, \hyperlink{class_piko_1_1_window_base}{Window\-Base}$\ast$$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper class to create windows build on top of the winapi. 
+
+Definition at line 21 of file Window\-Base.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_piko_1_1_window_base_aeae412731ab7b4fc7aeaa6a39a05dbd4}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!Window\-Base@{Window\-Base}}
+\index{Window\-Base@{Window\-Base}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{Window\-Base}]{\setlength{\rightskip}{0pt plus 5cm}Piko\-::\-Window\-Base\-::\-Window\-Base (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{title, }
+\item[{int}]{width = {\ttfamily GetSystemMetrics(SM\-\_\-CXSCREEN)/2}, }
+\item[{int}]{height = {\ttfamily GetSystemMetrics(SM\-\_\-CYSCREEN)/2}}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/class_piko_1_1_window_base_aeae412731ab7b4fc7aeaa6a39a05dbd4}
+Constructor to create a window the the specified title and optional size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Window title showing up on the upper border. \\
+\hline
+{\em width} & Window width. \\
+\hline
+{\em height} & Window height. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_a8e0ff7e2f9de0593ff5f30690c8a1709}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!$\sim$\-Window\-Base@{$\sim$\-Window\-Base}}
+\index{$\sim$\-Window\-Base@{$\sim$\-Window\-Base}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{$\sim$\-Window\-Base}]{\setlength{\rightskip}{0pt plus 5cm}Piko\-::\-Window\-Base\-::$\sim$\-Window\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{d5/d35/class_piko_1_1_window_base_a8e0ff7e2f9de0593ff5f30690c8a1709}
+Destructor which removes the window from registry and resets the window handle. 
+
+Definition at line 59 of file Window\-Base.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_piko_1_1_window_base_a191ed08be1048698dc097a9c15738645}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!close@{close}}
+\index{close@{close}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-Window\-Base\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d5/d35/class_piko_1_1_window_base_a191ed08be1048698dc097a9c15738645}
+Function to close and destroy the window. 
+
+Definition at line 83 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_a1499a79647a1d375c3d471b29e1c9aeb}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!create\-Window@{create\-Window}}
+\index{create\-Window@{create\-Window}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{create\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-Window\-Base\-::create\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a1499a79647a1d375c3d471b29e1c9aeb}
+Function to create the window setting the window handle. 
+
+Definition at line 254 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_ade10d9b8547371c89280d3b4921fe85c}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!get\-Handle@{get\-Handle}}
+\index{get\-Handle@{get\-Handle}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{get\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}H\-W\-N\-D Piko\-::\-Window\-Base\-::get\-Handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d5/d35/class_piko_1_1_window_base_ade10d9b8547371c89280d3b4921fe85c}
+Function to get the window handle.
+
+\begin{DoxyReturn}{Returns}
+Window handle. 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_a76abd6ba4b10fcaa660374be5a2e5e72}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!init\-Window\-Class@{init\-Window\-Class}}
+\index{init\-Window\-Class@{init\-Window\-Class}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{init\-Window\-Class}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-Window\-Base\-::init\-Window\-Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a76abd6ba4b10fcaa660374be5a2e5e72}
+Function to initialize the window class structure. 
+
+Definition at line 220 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_ae0b863ad65962ea6262fdab2d74932fa}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!is\-Closed@{is\-Closed}}
+\index{is\-Closed@{is\-Closed}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{is\-Closed}]{\setlength{\rightskip}{0pt plus 5cm}bool Piko\-::\-Window\-Base\-::is\-Closed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d5/d35/class_piko_1_1_window_base_ae0b863ad65962ea6262fdab2d74932fa}
+Function to check if the window is closed.
+
+\begin{DoxyReturn}{Returns}
+True if the window is closed, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_a71b8febcd8354962939ae885f3a66a4d}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!message\-Handler@{message\-Handler}}
+\index{message\-Handler@{message\-Handler}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{message\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}bool Piko\-::\-Window\-Base\-::message\-Handler (
+\begin{DoxyParamCaption}
+\item[{U\-I\-N\-T}]{msg, }
+\item[{W\-P\-A\-R\-A\-M}]{w\-Param, }
+\item[{L\-P\-A\-R\-A\-M}]{l\-Param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{d5/d35/class_piko_1_1_window_base_a71b8febcd8354962939ae885f3a66a4d}
+Function to handle incoming messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Code of incoming message. \\
+\hline
+{\em w\-Param} & \\
+\hline
+{\em l\-Param} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 162 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_abad8721eb7514d09cd86f12df5ebab1d}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!on\-Key\-Down@{on\-Key\-Down}}
+\index{on\-Key\-Down@{on\-Key\-Down}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{on\-Key\-Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Piko\-::\-Window\-Base\-::on\-Key\-Down (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{d5/d35/class_piko_1_1_window_base_abad8721eb7514d09cd86f12df5ebab1d}
+Function to handle the event when a key was pressed. It is recommended to override this function for a custom behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keycode} & Key code to identify the pressed key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if corresponding event message will be consumed, otherwise false for further handling. 
+\end{DoxyReturn}
+
+
+Definition at line 180 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_ab85a94e05075f628747eea90b8ab319a}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!set\-Fullscreen@{set\-Fullscreen}}
+\index{set\-Fullscreen@{set\-Fullscreen}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{set\-Fullscreen}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-Window\-Base\-::set\-Fullscreen (
+\begin{DoxyParamCaption}
+\item[{bool}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}}\label{d5/d35/class_piko_1_1_window_base_ab85a94e05075f628747eea90b8ab319a}
+Function to switch the window between fullscreen and window mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & If set to true the window will switch to fullscreen mode, otherwise it will change to window mode instead. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_a7a38940a42a19e27dbf2c86d8457c188}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!set\-Title@{set\-Title}}
+\index{set\-Title@{set\-Title}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{set\-Title}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-Window\-Base\-::set\-Title (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{title}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}}\label{d5/d35/class_piko_1_1_window_base_a7a38940a42a19e27dbf2c86d8457c188}
+Function to set the window title.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & New window title. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_adc2517998fdfcff88f16de67d7fc86e0}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!show@{show}}
+\index{show@{show}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-Window\-Base\-::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d5/d35/class_piko_1_1_window_base_adc2517998fdfcff88f16de67d7fc86e0}
+Function to show the window on the screen. 
+
+Definition at line 75 of file Window\-Base.\-cpp.
+
+\hypertarget{class_piko_1_1_window_base_a7dd15d87a3b3da34271d4973faff0926}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!static\-Wnd\-Proc@{static\-Wnd\-Proc}}
+\index{static\-Wnd\-Proc@{static\-Wnd\-Proc}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{static\-Wnd\-Proc}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-E\-S\-U\-L\-T C\-A\-L\-L\-B\-A\-C\-K Piko\-::\-Window\-Base\-::static\-Wnd\-Proc (
+\begin{DoxyParamCaption}
+\item[{H\-W\-N\-D}]{hwnd, }
+\item[{U\-I\-N\-T}]{msg, }
+\item[{W\-P\-A\-R\-A\-M}]{w\-Param, }
+\item[{L\-P\-A\-R\-A\-M}]{l\-Param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a7dd15d87a3b3da34271d4973faff0926}
+Function to dispatch sent messages to the right window instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hwnd} & Handle to the window which reveives the message. \\
+\hline
+{\em msg} & Message sent. \\
+\hline
+{\em w\-Param} & \\
+\hline
+{\em l\-Param} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 201 of file Window\-Base.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_piko_1_1_window_base_a0267852818d60b372f51f48b00e3e986}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!C\-L\-A\-S\-S\-\_\-\-N\-A\-M\-E\-\_\-\-B\-A\-S\-E@{C\-L\-A\-S\-S\-\_\-\-N\-A\-M\-E\-\_\-\-B\-A\-S\-E}}
+\index{C\-L\-A\-S\-S\-\_\-\-N\-A\-M\-E\-\_\-\-B\-A\-S\-E@{C\-L\-A\-S\-S\-\_\-\-N\-A\-M\-E\-\_\-\-B\-A\-S\-E}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{C\-L\-A\-S\-S\-\_\-\-N\-A\-M\-E\-\_\-\-B\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string Piko\-::\-Window\-Base\-::\-C\-L\-A\-S\-S\-\_\-\-N\-A\-M\-E\-\_\-\-B\-A\-S\-E = \char`\"{}Window\-Base\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a0267852818d60b372f51f48b00e3e986}
+Window base class name. Each window appends its memory adress to this name for a unique class name. 
+
+Definition at line 110 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_ad6491bf8d178a85c5d57c9d2ef5ec706}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-class\-Name@{m\-\_\-class\-Name}}
+\index{m\-\_\-class\-Name@{m\-\_\-class\-Name}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Piko\-::\-Window\-Base\-::m\-\_\-class\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_ad6491bf8d178a85c5d57c9d2ef5ec706}
+Name of the window class. 
+
+Definition at line 120 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_a66935c150f9a052b2f9fd5ec5e9116a2}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-height@{m\-\_\-height}}
+\index{m\-\_\-height@{m\-\_\-height}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}int Piko\-::\-Window\-Base\-::m\-\_\-height\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a66935c150f9a052b2f9fd5ec5e9116a2}
+Window height. 
+
+Definition at line 123 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_a84ca71a9b2cfe6ff0a7530a127fad31c}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-h\-Instance@{m\-\_\-h\-Instance}}
+\index{m\-\_\-h\-Instance@{m\-\_\-h\-Instance}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-h\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}H\-I\-N\-S\-T\-A\-N\-C\-E Piko\-::\-Window\-Base\-::m\-\_\-h\-Instance\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a84ca71a9b2cfe6ff0a7530a127fad31c}
+Handle for the application instance. 
+
+Definition at line 115 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_acc26556bb11c8c47a0499aad685bc69e}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-h\-Wnd@{m\-\_\-h\-Wnd}}
+\index{m\-\_\-h\-Wnd@{m\-\_\-h\-Wnd}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-h\-Wnd}]{\setlength{\rightskip}{0pt plus 5cm}H\-W\-N\-D Piko\-::\-Window\-Base\-::m\-\_\-h\-Wnd\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_acc26556bb11c8c47a0499aad685bc69e}
+Handle to the window. 
+
+Definition at line 116 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_a0739592738b6a4e46206d3a2bf1cf892}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-is\-Closed@{m\-\_\-is\-Closed}}
+\index{m\-\_\-is\-Closed@{m\-\_\-is\-Closed}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-is\-Closed}]{\setlength{\rightskip}{0pt plus 5cm}bool Piko\-::\-Window\-Base\-::m\-\_\-is\-Closed\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a0739592738b6a4e46206d3a2bf1cf892}
+Flag to indicate if the window is closed. 
+
+Definition at line 127 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_aa0fcf89b789f911a37d526cd3d45a05b}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-is\-Fullscreen@{m\-\_\-is\-Fullscreen}}
+\index{m\-\_\-is\-Fullscreen@{m\-\_\-is\-Fullscreen}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-is\-Fullscreen}]{\setlength{\rightskip}{0pt plus 5cm}bool Piko\-::\-Window\-Base\-::m\-\_\-is\-Fullscreen\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_aa0fcf89b789f911a37d526cd3d45a05b}
+Flag to indicate if window is in fullscreen mode. 
+
+Definition at line 128 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_ad900258cbbba286731019361cc68c40a}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-max\-Height@{m\-\_\-max\-Height}}
+\index{m\-\_\-max\-Height@{m\-\_\-max\-Height}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-max\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Piko\-::\-Window\-Base\-::m\-\_\-max\-Height\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_ad900258cbbba286731019361cc68c40a}
+Maximum window height. 
+
+Definition at line 125 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_a98906296f0425ce5dbb4e1a87d3e47b0}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-max\-Width@{m\-\_\-max\-Width}}
+\index{m\-\_\-max\-Width@{m\-\_\-max\-Width}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-max\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Piko\-::\-Window\-Base\-::m\-\_\-max\-Width\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a98906296f0425ce5dbb4e1a87d3e47b0}
+Maximum window width. 
+
+Definition at line 124 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_a7ceb6bf3578cee3fea335d2fef70d4b2}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-title@{m\-\_\-title}}
+\index{m\-\_\-title@{m\-\_\-title}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-title}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Piko\-::\-Window\-Base\-::m\-\_\-title\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a7ceb6bf3578cee3fea335d2fef70d4b2}
+Window title. 
+
+Definition at line 119 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_aa307fb2f2593554bff1338beda280d91}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-wc@{m\-\_\-wc}}
+\index{m\-\_\-wc@{m\-\_\-wc}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-wc}]{\setlength{\rightskip}{0pt plus 5cm}W\-N\-D\-C\-L\-A\-S\-S\-E\-X\-A Piko\-::\-Window\-Base\-::m\-\_\-wc\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_aa307fb2f2593554bff1338beda280d91}
+Window class structure. 
+
+Definition at line 117 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_aaa2d391163ae4db0a2bb7ff3cb241475}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-\_\-width@{m\-\_\-width}}
+\index{m\-\_\-width@{m\-\_\-width}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}int Piko\-::\-Window\-Base\-::m\-\_\-width\hspace{0.3cm}{\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_aaa2d391163ae4db0a2bb7ff3cb241475}
+Window width. 
+
+Definition at line 122 of file Window\-Base.\-h.
+
+\hypertarget{class_piko_1_1_window_base_a1adb16f8e85e4e461b57199e81b0c675}{\index{Piko\-::\-Window\-Base@{Piko\-::\-Window\-Base}!m\-Window\-Registry@{m\-Window\-Registry}}
+\index{m\-Window\-Registry@{m\-Window\-Registry}!Piko::WindowBase@{Piko\-::\-Window\-Base}}
+\subsubsection[{m\-Window\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$ H\-W\-N\-D, {\bf Window\-Base} $\ast$ $>$ Piko\-::\-Window\-Base\-::m\-Window\-Registry = std\-::map$<$H\-W\-N\-D, {\bf Window\-Base}$\ast$$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{d5/d35/class_piko_1_1_window_base_a1adb16f8e85e4e461b57199e81b0c675}
+Mapping of window handles to actual window instances. 
+
+Definition at line 113 of file Window\-Base.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_window_base_8h}{Window\-Base.\-h}\item 
+src/\hyperlink{_window_base_8cpp}{Window\-Base.\-cpp}\end{DoxyCompactItemize}

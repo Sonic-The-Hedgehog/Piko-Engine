@@ -1,0 +1,139 @@
+\hypertarget{class_piko_1_1_g_l_context}{\section{Piko\-:\-:G\-L\-Context Class Reference}
+\label{de/d00/class_piko_1_1_g_l_context}\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}}
+}
+
+
+{\ttfamily \#include $<$G\-L\-Context.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_piko_1_1_g_l_context_a9263cfadfb42a3a7f8fe1afb980b33bf}{G\-L\-Context} ()
+\item 
+\hyperlink{class_piko_1_1_g_l_context_aec63914bd1b2abca72d7b1cc94803f2f}{$\sim$\-G\-L\-Context} ()
+\item 
+void \hyperlink{class_piko_1_1_g_l_context_a57e2f8beb718866fa3f931affd369603}{init} (H\-W\-N\-D h\-Wnd)
+\item 
+void \hyperlink{class_piko_1_1_g_l_context_ae62778cdbfd2f20c72ed81277b1077a8}{dispose} ()
+\item 
+H\-D\-C \hyperlink{class_piko_1_1_g_l_context_af010829c4b747035b67d877ac2416d2c}{get\-Device\-Context} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+H\-W\-N\-D \hyperlink{class_piko_1_1_g_l_context_ae10ea9016ac413c4c8ecba207eacc9ff}{m\-\_\-h\-Wnd}
+\item 
+H\-D\-C \hyperlink{class_piko_1_1_g_l_context_a394104e4ba6c80adb3faee26251bd5bc}{m\-\_\-h\-D\-C}
+\item 
+H\-G\-L\-R\-C \hyperlink{class_piko_1_1_g_l_context_ab0232beca7b587ce3ede831d445d538d}{m\-\_\-h\-R\-C}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper class to create and maintain a device and rendering context for application using Open\-G\-L. 
+
+Definition at line 24 of file G\-L\-Context.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_piko_1_1_g_l_context_a9263cfadfb42a3a7f8fe1afb980b33bf}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!G\-L\-Context@{G\-L\-Context}}
+\index{G\-L\-Context@{G\-L\-Context}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{G\-L\-Context}]{\setlength{\rightskip}{0pt plus 5cm}Piko\-::\-G\-L\-Context\-::\-G\-L\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{de/d00/class_piko_1_1_g_l_context_a9263cfadfb42a3a7f8fe1afb980b33bf}
+Constructor to set up the contexts used. 
+
+Definition at line 18 of file G\-L\-Context.\-cpp.
+
+\hypertarget{class_piko_1_1_g_l_context_aec63914bd1b2abca72d7b1cc94803f2f}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!$\sim$\-G\-L\-Context@{$\sim$\-G\-L\-Context}}
+\index{$\sim$\-G\-L\-Context@{$\sim$\-G\-L\-Context}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{$\sim$\-G\-L\-Context}]{\setlength{\rightskip}{0pt plus 5cm}Piko\-::\-G\-L\-Context\-::$\sim$\-G\-L\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{de/d00/class_piko_1_1_g_l_context_aec63914bd1b2abca72d7b1cc94803f2f}
+Destructor to dispose the the contexts. Same effect as \hyperlink{class_piko_1_1_g_l_context_ae62778cdbfd2f20c72ed81277b1077a8}{dispose()}. 
+
+Definition at line 29 of file G\-L\-Context.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_piko_1_1_g_l_context_ae62778cdbfd2f20c72ed81277b1077a8}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!dispose@{dispose}}
+\index{dispose@{dispose}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{dispose}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-G\-L\-Context\-::dispose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{de/d00/class_piko_1_1_g_l_context_ae62778cdbfd2f20c72ed81277b1077a8}
+Function to dispose the contexts used by Open\-G\-L. 
+
+Definition at line 87 of file G\-L\-Context.\-cpp.
+
+\hypertarget{class_piko_1_1_g_l_context_af010829c4b747035b67d877ac2416d2c}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!get\-Device\-Context@{get\-Device\-Context}}
+\index{get\-Device\-Context@{get\-Device\-Context}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{get\-Device\-Context}]{\setlength{\rightskip}{0pt plus 5cm}H\-D\-C Piko\-::\-G\-L\-Context\-::get\-Device\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{de/d00/class_piko_1_1_g_l_context_af010829c4b747035b67d877ac2416d2c}
+Function to get the device context used for rendering.
+
+\begin{DoxyReturn}{Returns}
+Device context. 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file G\-L\-Context.\-cpp.
+
+\hypertarget{class_piko_1_1_g_l_context_a57e2f8beb718866fa3f931affd369603}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!init@{init}}
+\index{init@{init}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Piko\-::\-G\-L\-Context\-::init (
+\begin{DoxyParamCaption}
+\item[{H\-W\-N\-D}]{h\-Wnd}
+\end{DoxyParamCaption}
+)}}\label{de/d00/class_piko_1_1_g_l_context_a57e2f8beb718866fa3f931affd369603}
+Function to initialize the contexts in order to use Open\-G\-L.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\-Wnd} & Handle to the window in which the rendering should be done. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file G\-L\-Context.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_piko_1_1_g_l_context_a394104e4ba6c80adb3faee26251bd5bc}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!m\-\_\-h\-D\-C@{m\-\_\-h\-D\-C}}
+\index{m\-\_\-h\-D\-C@{m\-\_\-h\-D\-C}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{m\-\_\-h\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}H\-D\-C Piko\-::\-G\-L\-Context\-::m\-\_\-h\-D\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{de/d00/class_piko_1_1_g_l_context_a394104e4ba6c80adb3faee26251bd5bc}
+Device context. 
+
+Definition at line 61 of file G\-L\-Context.\-h.
+
+\hypertarget{class_piko_1_1_g_l_context_ab0232beca7b587ce3ede831d445d538d}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!m\-\_\-h\-R\-C@{m\-\_\-h\-R\-C}}
+\index{m\-\_\-h\-R\-C@{m\-\_\-h\-R\-C}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{m\-\_\-h\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}H\-G\-L\-R\-C Piko\-::\-G\-L\-Context\-::m\-\_\-h\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{de/d00/class_piko_1_1_g_l_context_ab0232beca7b587ce3ede831d445d538d}
+Rendering context. 
+
+Definition at line 62 of file G\-L\-Context.\-h.
+
+\hypertarget{class_piko_1_1_g_l_context_ae10ea9016ac413c4c8ecba207eacc9ff}{\index{Piko\-::\-G\-L\-Context@{Piko\-::\-G\-L\-Context}!m\-\_\-h\-Wnd@{m\-\_\-h\-Wnd}}
+\index{m\-\_\-h\-Wnd@{m\-\_\-h\-Wnd}!Piko::GLContext@{Piko\-::\-G\-L\-Context}}
+\subsubsection[{m\-\_\-h\-Wnd}]{\setlength{\rightskip}{0pt plus 5cm}H\-W\-N\-D Piko\-::\-G\-L\-Context\-::m\-\_\-h\-Wnd\hspace{0.3cm}{\ttfamily [private]}}}\label{de/d00/class_piko_1_1_g_l_context_ae10ea9016ac413c4c8ecba207eacc9ff}
+Window on which the rendering should occure. 
+
+Definition at line 60 of file G\-L\-Context.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_g_l_context_8h}{G\-L\-Context.\-h}\item 
+src/\hyperlink{_g_l_context_8cpp}{G\-L\-Context.\-cpp}\end{DoxyCompactItemize}

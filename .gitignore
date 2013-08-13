@@ -15,4 +15,7 @@ Release/
 *~
 *.swp
 
+# Config files #
+################
+Doxyfile
 

@@ -25,13 +25,13 @@ namespace Piko {
             /**
              * Constructor to create an error message from a specified error description and an
              * optional error code. If no error code was specified the return value of 
-             * GetLastError() will be used instead.
+             * GetLastError() will be used instead (symbolized by the code -987654321).
              * 
              * @param msg Message to describe the error.
              * @param code User defined error code or return value of GetLastError() if no code was
              *             specified.
              */
-            ErrorMessage(std::string msg, int code = GetLastError());
+            ErrorMessage(std::string msg, int code = -987654321);
 
             /**
              * Destructor.
@@ -45,13 +45,18 @@ namespace Piko {
              */
             std::string str() const;
 
+            /**
+             * Function to have nice output, if appended to a stream.
+             */
+            friend std::ostream& operator<<(std::ostream& stream, const ErrorMessage& em) {
+                return stream << em.m_oss.str();
+            }
 
         private:
 
             std::ostringstream m_oss;   /**< Stream used to build the error message. */
             std::string m_msg;          /**< Text to describe the error. */
             int m_code;                 /**< Error code to print in conjunction with the text. */
-
 
 
     }; /* Class ErrorMessage */

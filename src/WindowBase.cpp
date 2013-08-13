@@ -20,9 +20,10 @@ namespace Piko {
 
     const std::string WindowBase::CLASS_NAME_BASE = "WindowBase";
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
-    std::map<HWND, WindowBase*> WindowBase::mWindowRegistry 
-        = std::map<HWND, WindowBase*>();
+    std::map<HWND, WindowBase*> WindowBase::mWindowRegistry = std::map<HWND, WindowBase*>();
 
 
 
@@ -52,6 +53,8 @@ namespace Piko {
         std::cout << "[WindowBase] Finished initialization." << std::endl;
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     WindowBase::~WindowBase() {
 
@@ -60,14 +63,22 @@ namespace Piko {
         if(!UnregisterClassA(m_className.c_str(), m_hInstance)) {
             std::cerr << ErrorMessage("Could not unregister window class.").str() << std::endl;
         }
+
+        mWindowRegistry.erase(m_hWnd);
+        m_hWnd = NULL;
+        ZeroMemory(&m_wc, sizeof(m_wc));
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     void WindowBase::show() const {
 
         ShowWindow(m_hWnd, SW_SHOW);
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     void WindowBase::close() {
 
@@ -78,18 +89,24 @@ namespace Piko {
     
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     bool WindowBase::isClosed() const {
 
         return m_isClosed;
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     HWND WindowBase::getHandle() const {
         
         return m_hWnd;
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     void WindowBase::setTitle(std::string title) {
         
@@ -97,6 +114,8 @@ namespace Piko {
         SetWindowTextA(m_hWnd, m_title.c_str());
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     void WindowBase::setFullscreen(bool flag) {
         
@@ -155,6 +174,8 @@ namespace Piko {
         }
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     bool WindowBase::onKeyDown(int keycode) {
 
@@ -181,6 +202,7 @@ namespace Piko {
 
         //std::cout << "Dispatch message." << std::endl;
 
+        // Try to get the right message handler for the window.
         auto seek = mWindowRegistry.find(hwnd);
         if(seek == mWindowRegistry.end()) {
             return DefWindowProc(hwnd, msg, wParam, lParam);        
@@ -192,6 +214,8 @@ namespace Piko {
         return msgConsumed ? NULL : DefWindowProc(hwnd, msg, wParam, lParam);
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     void WindowBase::initWindowClass() {
 
@@ -224,6 +248,8 @@ namespace Piko {
         }
     }
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     void WindowBase::createWindow() {
 
@@ -241,7 +267,7 @@ namespace Piko {
 
         if(!m_hWnd) {
             throw std::runtime_error(
-                ErrorMessage("Could not register window class.").str());
+                ErrorMessage("Could not create window.").str());
         }
     }
 

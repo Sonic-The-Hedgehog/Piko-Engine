@@ -4,8 +4,8 @@
  * @version     1.0
  *
  * Specification for for the wrapper class to create and maintain a device and rendering context 
- * for application using OpenGL. After creating an instance use init() to enable and dispose() to 
- * disable OpenGL.
+ * for application using OpenGL. After creating an instance use init(HWND) to enable and dispose() 
+ * to disable OpenGL for a specified window.
  */
 #ifndef GLCONTEXT_H
 #define GLCONTEXT_H
@@ -36,7 +36,7 @@ namespace Piko {
             ~GLContext();
 
             /**
-             * Function to initialize the contexts so that OpenGL can be used.
+             * Function to initialize the contexts in order to use OpenGL.
              * 
              * @param hWnd Handle to the window in which the rendering should be done.
              */

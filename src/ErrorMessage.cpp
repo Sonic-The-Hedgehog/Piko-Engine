@@ -20,17 +20,17 @@ namespace Piko {
       m_msg(msg),
       m_code(code) {
 
-          m_oss << m_msg << " Error code: " << code;
+          m_oss << m_msg;
+          
+          if(code == -987654321) m_oss << " System error code: " << GetLastError();
+          else m_oss << " User error code: " << code; 
     } 
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     ErrorMessage::~ErrorMessage() {
 
     }
 
-
-    std::string ErrorMessage::str() const {
-        
-        return m_oss.str();
-    }
-}
+} /* Namespace Piko */

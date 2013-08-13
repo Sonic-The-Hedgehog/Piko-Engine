@@ -34,10 +34,9 @@ namespace Piko {
                        int height = GetSystemMetrics(SM_CYSCREEN)/2);
 
             /**
-             * Destructor.
+             * Destructor which removes the window from registry and resets the window handle.
              */
             virtual ~WindowBase();
-
 
             /**
              * Function to show the window on the screen.
@@ -52,7 +51,7 @@ namespace Piko {
             /**
              * Function to check if the window is closed.
              *
-             * @return
+             * @return True if the window is closed, otherwise false.
              */
             bool isClosed() const;
 
@@ -71,10 +70,10 @@ namespace Piko {
             virtual void setTitle(std::string title) final;
 
             /**
-             * Function to switch the window between fullscreen and windowed mode.
+             * Function to switch the window between fullscreen and window mode.
              *
              * @param flag If set to true the window will switch to fullscreen mode, otherwise
-             *             it will change to window mode instead.
+             *             it will change to window mode instead. 
              */
             virtual void setFullscreen(bool flag) final;
 
@@ -91,7 +90,7 @@ namespace Piko {
             virtual bool messageHandler(UINT msg, WPARAM wParam, LPARAM lParam);
 
             /**
-             * Function to handle the event when a key was pressed. It is recommended to overwrite
+             * Function to handle the event when a key was pressed. It is recommended to override
              * this function for a custom behaviour.
              * 
              * @param keycode Key code to identify the pressed key.
@@ -104,7 +103,11 @@ namespace Piko {
 
         private:
 
-            static const std::string CLASS_NAME_BASE;   /**< Window base class name. */
+            /** 
+             * Window base class name. Each window appends its memory adress to this name for a 
+             * unique class name. 
+             **/
+            static const std::string CLASS_NAME_BASE;
 
             /** Mapping of window handles to actual window instances. */
             static std::map<HWND, WindowBase *> mWindowRegistry;
@@ -128,7 +131,7 @@ namespace Piko {
             /**
              * Function to dispatch sent messages to the right window instance.
              * 
-             * @param hwnd
+             * @param hwnd Handle to the window which reveives the message.
              * @param msg Message sent.
              * @param wParam 
              * @param lParam
