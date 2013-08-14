@@ -18,7 +18,7 @@ namespace Piko {
     /**
      * Class to build a error message from a string and an error code as integer.
      */
-    class ErrorMessage {
+    class ErrorMessage final {
 
         public:
 

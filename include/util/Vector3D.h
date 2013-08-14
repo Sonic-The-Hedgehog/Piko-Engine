@@ -10,7 +10,7 @@
 
 #include <iostream>
 
-#include "ErrorMessage.h"
+#include "../ErrorMessage.h"
 
 
 namespace Piko {
@@ -20,7 +20,7 @@ namespace Piko {
      * used on instances of this class.
      */
     template<typename T>
-    class Vector3D {
+    class Vector3D final {
     
         public:
 

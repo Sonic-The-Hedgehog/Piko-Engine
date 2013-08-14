@@ -18,10 +18,10 @@
 namespace Piko {
 
     /**
-    * Wrapper class to create and maintain a device and rendering context for application using 
-    * OpenGL.
+     * Wrapper class to create and maintain a device and rendering context for application using 
+     * OpenGL.
      */
-    class GLContext {
+    class GLContext final {
     
         public:
             
