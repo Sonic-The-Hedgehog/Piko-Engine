@@ -234,7 +234,7 @@ namespace Piko {
     //---------------------------------------------------------------------------------------------
 
     template<typename T>
-    const T& Vector3D<T>::x() const {
+    inline const T& Vector3D<T>::x() const {
         return m_x;
     }
 
@@ -242,7 +242,7 @@ namespace Piko {
     //---------------------------------------------------------------------------------------------
 
     template<typename T>
-    const T& Vector3D<T>::y() const {
+    inline const T& Vector3D<T>::y() const {
         return m_y;
     }
 
@@ -250,7 +250,7 @@ namespace Piko {
     //---------------------------------------------------------------------------------------------
 
     template<typename T>
-    const T& Vector3D<T>::z() const {
+    inline const T& Vector3D<T>::z() const {
         return m_z;
     }
 
