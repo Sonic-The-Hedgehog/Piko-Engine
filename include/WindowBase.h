@@ -151,6 +151,16 @@ namespace Piko {
              */
             void createWindow();
 
+            /**
+             * Copy constructor is forbidden.
+             */
+            WindowBase(const WindowBase& wnd);
+
+            /**
+             * Assignment operator is forbidden.
+             */
+            WindowBase& operator=(const WindowBase& wnd);
+
 
     }; /* Class WindowBase */
 

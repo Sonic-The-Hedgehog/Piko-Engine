@@ -61,6 +61,15 @@ namespace Piko {
             HDC m_hDC;      /**< Device context. */
             HGLRC m_hRC;    /**< Rendering context. */
 
+            /**
+             * Forbid copy constructor.
+             */
+            GLContext(const GLContext& context);
+
+            /**
+             * Forbid assignment operator.
+             */
+            GLContext& operator=(const GLContext& context);
     
     }; /* Class GLContext */
 

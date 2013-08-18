@@ -34,11 +34,6 @@ namespace Piko {
             ErrorMessage(std::string msg, int code = -987654321);
 
             /**
-             * Destructor.
-             */
-            ~ErrorMessage();
-
-            /**
              * Function to get the build error message as a string.
              * 
              * @return Error message and error code as a string.
