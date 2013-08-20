@@ -3,7 +3,7 @@
  * @author      Robert Koch
  * @version     1.0
  *
- * This file contains the class declaration for a 3-dimensional, mathematical vector. Bla
+ * This file contains the class declaration for a 3-dimensional, mathematical vector. Bla 
  */
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
